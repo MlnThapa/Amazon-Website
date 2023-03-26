@@ -25,7 +25,7 @@ header{
 }
 .left-part{
     height:60%;
-    width:8%;
+    width:100px;
     margin-left:2%;
     background-image: url("http://pngimg.com/uploads/amazon/amazon_PNG11.png");
     background-position:bottom;
@@ -35,7 +35,7 @@ header{
 
 .mid-part{
     height:50%;
-    width:28%;
+    width:420px;
     background-color: #eaeced;
     border-radius: 10px;
     display: flex;
@@ -43,7 +43,7 @@ header{
     border:1px solid var(--white);
 }
 input{
-    width:65%;
+    width:265px;
     outline: none;
     height:100%;
     border:none;
@@ -58,7 +58,7 @@ input::placeholder{
     font-size: 0.9em;
 }
 #category{
-    width:25%;
+    width:125px;
     height:100%;
     outline:none;
     border:none;
@@ -69,7 +69,7 @@ input::placeholder{
 
 }
 .searchBox{
-    width:10%;
+    width:50px;
     height:100%;
     background: var(--orange);
     border-radius: 0 9px 9px 0;
