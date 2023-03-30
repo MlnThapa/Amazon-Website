@@ -18,20 +18,26 @@ body{
 }
 header{
     height:10vh;
-    width:100%;
+    width:100vw;
     background:var(--blue);
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+.left-part-container{
+    height:40px;
+    width:110px;
+    margin-left:2%;
 }
 .left-part{
-    height:60%;
-    width:100px;
-    margin-left:2%;
+    height:100%;
+    width:100%;
     background-image: url("http://pngimg.com/uploads/amazon/amazon_PNG11.png");
     background-position:bottom;
     background-size:90% 90%;
     background-repeat: no-repeat;
 }
+
 
 .mid-part{
     height:50%;
@@ -95,6 +101,43 @@ input::placeholder{
     width:15%;
     background: #ff9800;
 }
+@media screen and (max-width: 1104px) {
+    .right-container{
+        display: none;
+    }
+    .right-part{
+        height:1px;
+        width:35px;
+        background: var(--whiteShade);
+    }
+    .right-part::after{
+        content: '';
+        position:absolute;
+        height:1px;
+        width:35px;
+        background: var(--whiteShade);
+        top: 25px;
+    }
+    header{
+        height:10vh;
+        width:auto;
+        background:var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+  }
+  @media screen and (max-width: 897px){
+    .right-part{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 614px){
+    header{
+        flex-direction: column;
+        width:100%;
+    }
+  }
 #heart{
     background:url("./images/icons8-favorite-30.png");
     background-position: center;
@@ -133,7 +176,7 @@ input::placeholder{
 }
 .banner-container{
     height:65%;
-    width:25%;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -177,14 +220,14 @@ input::placeholder{
 
 .categories-container{
     width:100%;
-    height:70%;
+    height:auto;
     /* background: var(--orange); */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 nav{
-    height:100%;
+    height:280px;
     width: 15%;
     background:#fff;
     border-radius: 14px;
@@ -195,31 +238,103 @@ nav{
 .dress{
     background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/Fuji_dash_dress_2X._SY608_CB626369146_.jpg");
 }
+.dress::after{
+    content:"Dresses";
+    position:absolute;
+    width:10%;
+    height:20px;
+    /* background: var(--white); */
+    top: 102%;
+}
 .health{
     background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop2x._SY608_CB627424361_.jpg");
 }
+.health::after{
+    content:"Health Products";
+    position:absolute;
+    width:10%;
+    height:20px;
+    /* background: var(--white); */
+    top: 102%;
+}
+
 .electronics{
     background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_2x._SY608_CB432774322_.jpg");
+}
+.electronics::after{
+    content:"Electronics";
+    position:absolute;
+    width:10%;
+    height:20px;
+    /* background: var(--white); */
+    top: 102%;
 }
 .easy-return{
     background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Returns_2x._SY608_CB432774709_.jpg");
 }
+.easy-return::after{
+    content:"Easy return";
+    position:absolute;
+    width:10%;
+    height:20px;
+    /* background: var(--white); */
+    top: 102%;
+}
 .camera{
     background-image: url("./images/camera.jpg");
+}
+.camera::after{
+    content:"Camera";
+    position:absolute;
+    width:10%;
+    height:20px;
+    /* background: var(--white); */
+    top: 102%;
 }
 
 .phone{
     background-image: url("https://m.media-amazon.com/images/I/81ZEdtYBYfL._AC_SY400_.jpg");
 }
+.phone::after{
+    content:"Oneplus 10 Pro";
+    position:absolute;
+    width:10%;
+    height:20px;
+    /* background: var(--white); */
+    top:153%;
+}
 .laptop{
     background-image: url("https://m.media-amazon.com/images/I/71SCvh0L3OL._AC_SY400_.jpg");
+}
+.laptop::after{
+    content:"Acer Predator";
+    position:absolute;
+    width:10%;
+    height:20px;
+    top:153%;
 }
 .book{
     background-image: url("https://m.media-amazon.com/images/I/51xUZItrHJL._AC_SY400_.jpg");
 }
+.book::after{
+    content:"Design Book";
+    position:absolute;
+    width:10%;
+    height:20px;
+    top:153%;
+}
 .watch{
     background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_SmartWatch_2X._SY608_CB639922111_.jpg");
 }
+.book::after{
+    content:"Design Book";
+    position:absolute;
+    width:10%;
+    height:20px;
+    top:153%;
+}
+
+
 .samsung{
     background-image: url("https://m.media-amazon.com/images/I/71Sa3dqTqzL._AC_SY400_.jpg");
 }
