@@ -8,95 +8,98 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="left-part-container">
-            <div class="left-part">
+    <div class="amazon">
+        <header>
+            <div class="left-part-container">
+                <div class="left-part">
+                </div>
+            </div>
+            <div class="mid-part">
+                <input type="text" placeholder="search...">
+                <select name="categories" id="category">
+                    <option value="AllCategories">All Categories</option>
+                    <option value="devices">Amazon Devices</option>
+                    <option value="fashion">Amazon Fashion</option>
+                    <option value="pharmacy">Amazon Pharmacy</option>
+                    <option value="appliances">Appliances</option>
+                    <option value="games">Apps & games</option>
+                </select>
+                <nav class="searchBox">
+                    <div class="searchIcon"></div>
+                </nav>
+            </div>
+            <div class="right-part">
+                <div class="right-container light" id="light" onclick="lightDark()"></div>
+                <div class="right-container" id="heart"></div>
+                <div class="right-container" id="cart"></div>
+                <div class="right-container" id="bell"></div>
+                <div class="right-container" id="profile"></div>
+            </div>
+        </header>
+        <div class="banner">
+            <div class="banner-container">
+                <h1>Free Delivery!</h1>
+                <p>Don't miss out! Only today, get free Next Day <br> delivery on all your product</p>
+                <div class="browse-button"><p>Browse products</p></div>
             </div>
         </div>
-        <div class="mid-part">
-            <input type="text" placeholder="search...">
-            <select name="categories" id="category">
-                <option value="AllCategories">All Categories</option>
-                <option value="devices">Amazon Devices</option>
-                <option value="fashion">Amazon Fashion</option>
-                <option value="pharmacy">Amazon Pharmacy</option>
-                <option value="appliances">Appliances</option>
-                <option value="games">Apps & games</option>
-            </select>
-            <nav class="searchBox">
-                <div class="searchIcon"></div>
-            </nav>
+        <div class="categories">
+            <h3>Popular categories</h3>
+            <div class="categories-container">
+                <nav class="electronics"></nav>
+                <nav class="dress"></nav>
+                <nav class="health"></nav>
+                <nav class="camera"></nav>
+                <nav class="easy-return"></nav>
+            </div>
         </div>
-        <div class="right-part">
-            <div class="right-container" id="heart"></div>
-            <div class="right-container" id="cart"></div>
-            <div class="right-container" id="bell"></div>
-            <div class="right-container" id="profile"></div>
+        <div class="categories">
+            <h3>Frequent items</h3>
+            <div class="categories-container">
+                <nav class="phone"></nav>
+                <nav class="laptop"></nav>
+                <nav class="book"></nav>
+                <nav class="samsung"></nav>
+                <nav class="watch"></nav>
+            </div>
         </div>
-    </header>
-    <div class="banner">
-        <div class="banner-container">
-            <h1>Free Delivery!</h1>
-            <p>Don't miss out! Only today, get free Next Day <br> delivery on all your product</p>
-            <div class="browse-button"><p>Browse products</p></div>
-        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <ul>
+                        <li><h3>Get to know us</h3></li>
+                        <li>Careers</li>
+                        <li>Blog</li>
+                        <li>About amazon</li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <ul>
+                        <li><h3>Make money with us</h3></li>
+                        <li>Sell products on amazon</li>
+                        <li>sell on amazon business</li>
+                        <li>Sell apps ona amazon</li>
+                        <li>Become an affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <ul>
+                        <li><h3>Amazon payment products</h3></li>
+                        <li>Amazon business card</li>
+                        <li>Shop with points</li>
+                        <li>Reload your balance</li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <ul>
+                        <li><h3>Let us help you</h3></li>
+                        <li>Your account</li>
+                        <li>Your orders</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
     </div>
-    <div class="categories">
-        <h3 style="color: #151d26">Popular categories</h3>
-        <div class="categories-container">
-            <nav class="electronics"></nav>
-            <nav class="dress"></nav>
-            <nav class="health"></nav>
-            <nav class="camera"></nav>
-            <nav class="easy-return"></nav>
-        </div>
-    </div>
-    <div class="categories">
-        <h3>Frequent items</h3>
-        <div class="categories-container">
-            <nav class="phone"></nav>
-            <nav class="laptop"></nav>
-            <nav class="book"></nav>
-            <nav class="samsung"></nav>
-            <nav class="watch"></nav>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info">
-                <ul>
-                    <li><h3>Get to know us</h3></li>
-                    <li>Careers</li>
-                    <li>Blog</li>
-                    <li>About amazon</li>
-                </ul>
-            </div>
-            <div class="footer-info">
-                <ul>
-                    <li><h3>Make money with us</h3></li>
-                    <li>Sell products on amazon</li>
-                    <li>sell on amazon business</li>
-                    <li>Sell apps ona amazon</li>
-                    <li>Become an affiliate</li>
-                </ul>
-            </div>
-            <div class="footer-info">
-                <ul>
-                    <li><h3>Amazon payment products</h3></li>
-                    <li>Amazon business card</li>
-                    <li>Shop with points</li>
-                    <li>Reload your balance</li>
-                </ul>
-            </div>
-            <div class="footer-info">
-                <ul>
-                    <li><h3>Let us help you</h3></li>
-                    <li>Your account</li>
-                    <li>Your orders</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    
 </body>
 </html>
