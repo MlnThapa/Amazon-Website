@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
-<body>
+<body class="body">
     <div id = "coupon">
         <div class="close-coupon" onclick="hideCoupon()">X</div>
     </div>
     <div class="amazon">
         <header>
             <div class="left-part-container">
-                <div class="left-part">
-                </div>
+                <div class="left-part"></div>
             </div>
+            <div class="weather" onclick="geoLocation()"></div>
             <div class="mid-part">
                 <input type="text" placeholder="search...">
                 <select name="categories" id="category">
@@ -28,7 +28,7 @@
                     <option value="games">Apps & games</option>
                 </select>
                 <nav class="searchBox">
-                    <div class="searchIcon"></div>
+                    <div class="searchIcon" onclick="geoLocation()"></div>
                 </nav>
             </div>
             <div class="right-part">
@@ -39,6 +39,19 @@
                 <div class="right-container" id="profile"></div>
             </div>
         </header>
+        <div class="nav-sprite">
+            <span class="nav-sprite-left">
+                <a href="">All</a>
+                <a href="">Today's Deal</a>
+                <a href="">Customer Service</a>
+                <a href="">Registery</a>
+                <a href="">Gift Cards   </a>
+                <a href="">Sell</a>
+            </span>
+            <span class="nav-sprite-right">
+                <a href="">Shop great deals now</a>
+            </span>
+        </div>
         <div class="banner">
             <div class="banner-container">
                 <h1>Free Delivery!</h1>
@@ -47,23 +60,96 @@
             </div>
         </div>
         <div class="categories">
-            <h3>Popular categories</h3>
             <div class="categories-container">
-                <nav class="electronics"></nav>
-                <nav class="dress"></nav>
-                <nav class="health"></nav>
-                <nav class="camera"></nav>
+                <nav class="electronics">
+                    <div class="card-ui-header">
+                        <h3>Gaming Accessories</h3>
+                    </div>
+                    <div class="card-ui-body">
+                        <div class="card-ui-partA">
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image1"></div>
+                                <p>Headsets</p>
+                            </div>
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image2"></div>
+                                <p>Keyboards</p>
+                            </div>
+                        </div>
+                        <div class="card-ui-partB">
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image3"></div>
+                                <p>Gaming mouse</p>
+                            </div>
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image4"></div>
+                                <p>Chairs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ui-footer">
+                        <a href="">See more</a>
+                    </div>
+                </nav>
+                <nav class="dress">
+                    <div class="card-ui-header">
+                        <h3>Refresh your space</h3>
+                    </div>
+                    <div class="card-ui-body">
+                        <div class="card-ui-partA">
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image5"></div>
+                                <p>Dining</p>
+                            </div>
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image6"></div>
+                                <p>Home</p>
+                            </div>
+                        </div>
+                        <div class="card-ui-partB">
+                            <div class="card-ui-image">
+                                <div class="card-ui-imagediv image7"></div>
+                                <p>Kitchen</p>
+                            </div>
+                            <di class="card-ui-image">
+                                <div class="card-ui-imagediv image8"></div>
+                                <p>Health and Beauty</p>
+                            </di>
+                        </div>
+                    </div>
+                    <div class="card-ui-footer">
+                        <a href="">See more</a>
+                    </div>
+                </nav>
+                <nav class="health">
+                    <div class="card-ui-header">
+                        <h3>Shop by Category</h3>
+                    </div>
+                    <div class="card-ui-body">
+                        <div class="card-ui-part9">
+                            <div class="card-ui-imagediv9">   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ui-footer">
+                        <a href="">See more</a>
+                    </div>
+                </nav>
+                <nav class="camera">
+                    <div class="card-ui-header">
+                        <h3>Weather</h3>
+                    </div>
+                    <div class="location">
+                        <span><h3 class="country"></h3></span>
+                        <span> - </span>
+                        <span><h3 class="state"></h3></span>
+                    </div>
+                    <div class="weather-div">
+                        <span><h2 class="weather-detail"></h2></span>
+                    </div>
+                    </div>
+                </nav>
                 <nav class="easy-return"></nav>
-            </div>
-        </div>
-        <div class="categories">
-            <h3>Frequent items</h3>
-            <div class="categories-container">
-                <nav class="phone"></nav>
-                <nav class="laptop"></nav>
-                <nav class="book"></nav>
-                <nav class="samsung"></nav>
-                <nav class="watch"></nav>
             </div>
         </div>
         <footer>

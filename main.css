@@ -6,8 +6,14 @@
     font-family: 'Inter', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
+.body.body-dark{
+    background:#191919;
+}
+.body{
+    background:#f5f4f2;
+}
+
 .amazon{
-    background: #f5f4f2; 
     transition: 0.2s ease-in-out;
     z-index: 0;
     filter: blur(8px);
@@ -22,9 +28,10 @@
     --white:#3c4550;
     --blueShade:#222f3e;
     --whiteShade:#bec2c6;
+    --white:#fff;
 }
 header{
-    height:10vh;
+    height:60px;
     width:100vw;
     background:var(--blue);
     display: flex;
@@ -44,8 +51,15 @@ header{
     background-size:90% 90%;
     background-repeat: no-repeat;
 }
-
-
+.weather{
+    height:40px;
+    width: 40px;
+    background:url('./images/icons8-partly-cloudy-day-25.png');
+    background-position:center;
+    background-size:80% 80%;
+    background-repeat: no-repeat;
+    margin-left:2%;
+}
 .mid-part{
     height:50%;
     width:420px;
@@ -231,15 +245,9 @@ input::placeholder{
 }
 
 /* categories */
-
 .categories{
-    height:50vh;
-    width:90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 10px;
+    width:100%;
+    margin-top: 50px;
 }
 .categories.dark{
     color:var(--whiteShade);
@@ -247,128 +255,126 @@ input::placeholder{
 
 .categories-container{
     width:100%;
-    height:auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-nav{
-    height:280px;
-    width: 15%;
-    background:#fff;
-    border-radius: 14px;
+.categories-container>nav{
+    height:410px;
+    width:325px;
+    background: #fff;
+    margin:0px 0px 0px 25px;
+}
+
+.card-ui-header{
+    padding:20px 0px 20px 20px;
+}
+.card-ui-body{
+    height:300px;
+}
+.card-ui-partA{
+    height:145px;
+    display: flex;
+    justify-content: space-around;
+}
+.card-ui-partB{
+    height:145px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.card-ui-image{
+    width:45%;
+    margin-left: 4.5%;
+}
+.card-ui-image>p{
+    font-size: 0.8em;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+.card-ui-imagediv{
+    width:90%;
+    height:80%;
+}
+.image1{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_2x._SY232_CB667159060_.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
 }
-.dress{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/Fuji_dash_dress_2X._SY608_CB626369146_.jpg");
+.image2{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_2x._SY232_CB667159063_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.dress::after{
-    content:"Dresses";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top: 102%;
+.image3{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_2x._SY232_CB667159063_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.health{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop2x._SY608_CB627424361_.jpg");
-}
-.health::after{
-    content:"Health Products";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top: 102%;
+.image4{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_2x._SY232_CB667159060_.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
-.electronics{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_2x._SY608_CB432774322_.jpg");
+.image5{
+    background:url('https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_LP-HP_B08MYX5Q2W_01.23._SY232_CB619238939_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.electronics::after{
-    content:"Electronics";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top: 102%;
+.image6{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_home_B08RCCP3HV_01.23._SY232_CB619238939_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.easy-return{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Returns_2x._SY608_CB432774709_.jpg");
+.image7{
+    background:url('https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_kitchen_B0126LMDFK_01.23._SY232_CB619238939_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.easy-return::after{
-    content:"Easy return";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top: 102%;
+.image8{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_health-beauty_B07662GN57_01.23._SY232_CB619238939_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.camera{
-    background-image: url("./images/camera.jpg");
-}
-.camera::after{
-    content:"Camera";
-    position:absolute;
-    width:10%;
-    height:20px;
-    /* background: var(--white); */
-    top: 102%;
+.image9{
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_2x._SY608_CB432774322_.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
-.phone{
-    background-image: url("https://m.media-amazon.com/images/I/81ZEdtYBYfL._AC_SY400_.jpg");
+.card-ui-part9{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.phone::after{
-    content:"Oneplus 10 Pro";
-    position:absolute;
-    width:10%;
-    height:20px;
-    /* background: var(--white); */
-    top:153%;
+.card-ui-imagediv9{
+    height: 100%;
+    width: 100%;
+    background: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_2x._SY608_CB432774322_.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.laptop{
-    background-image: url("https://m.media-amazon.com/images/I/71SCvh0L3OL._AC_SY400_.jpg");
-}
-.laptop::after{
-    content:"Acer Predator";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top:153%;
-}
-.book{
-    background-image: url("https://m.media-amazon.com/images/I/51xUZItrHJL._AC_SY400_.jpg");
-}
-.book::after{
-    content:"Design Book";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top:153%;
+.card-ui-footer>a{
+    color:#007185;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin:25px 0px 0px 25px;
 }
 
-.samsung{
-    background-image: url("https://m.media-amazon.com/images/I/71Sa3dqTqzL._AC_SY400_.jpg");
+.location{
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
-.samsung::after{
-    content:"Samsung Galaxy";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top:153%;
+.location>span{
+    margin:0 3px 0 3px;
 }
-
-.watch{
-    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_SmartWatch_2X._SY608_CB639922111_.jpg");
+.weather-div{
+    width:100%;
+    display:flex;
+    justify-content: center;
 }
-.watch::after{
-    content:"Watch";
-    position:absolute;
-    width:10%;
-    height:20px;
-    top:153%;
-}
-
-
 footer{
     height:40vh;
     width:100vw;
@@ -418,5 +424,34 @@ ul li{
     left:498px;
     top:-10px;
     cursor: pointer;
+}
+
+/* nav Sprite */
+.nav-sprite{
+    height:5vh;
+    width:100vw;
+    background:var(--blueShade);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-sprite-left a{
+    color:var(--white);
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.nav-sprite-right{
+    margin-right: 25px;
+}
+.nav-sprite-right:hover{
+    border:1.5px solid var(--white)
+}
+
+.nav-sprite-right a{
+    color:var(--white);
+    text-decoration: none;
+    font-size: 0.9em;
+    padding:5px;
 }
 
