@@ -45,9 +45,6 @@ function geoLocation(){
             let longitude = data.coords["longitude"]
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e989050c538b213163998f96efa4a09b`)
             const json = await response.json();
-            console.log(json["name"]);
-            console.log(json["sys"]["country"]);
-            console.log(json["weather"][0]["main"]);
             country.innerHTML = json["sys"]["country"]
             state.innerHTML = json["name"]
             weather.innerHTML = json["weather"][0]["main"]
