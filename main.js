@@ -49,7 +49,7 @@ function geoLocation(){
             country.innerHTML = json["sys"]["country"]
             state.innerHTML = json["name"]
             weather.innerHTML = json["weather"][0]["main"]
-            temperature.innerHTML = json["main"]["temp"] - 273.15 + "&#8451;"
+            temperature.innerHTML = Math.round(json["main"]["temp"] - 273.15) + "&#8451;"
         })
     }else{
         console.log("Geo not supported")
