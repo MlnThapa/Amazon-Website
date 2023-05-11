@@ -374,6 +374,14 @@ input::placeholder{
     width:100%;
     display:flex;
     justify-content: center;
+    margin-top: 10px;
+}
+.temp-div{
+    width:100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     height:40vh;

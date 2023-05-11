@@ -7,6 +7,7 @@ let country = document.querySelector('.country')
 let state = document.querySelector('.state')
 let weather = document.querySelector('.weather-detail')
 let cards = document.querySelectorAll('.categories-container>nav')
+let temperature = document.querySelector('.temperature')
 let b = 0;
 
 window.onload(coupon.classList.add('coupon'))
@@ -48,6 +49,7 @@ function geoLocation(){
             country.innerHTML = json["sys"]["country"]
             state.innerHTML = json["name"]
             weather.innerHTML = json["weather"][0]["main"]
+            temperature.innerHTML = json["main"]["temp"] - 273.15 + "&#8451;"
         })
     }else{
         console.log("Geo not supported")
