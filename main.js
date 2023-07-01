@@ -19,17 +19,23 @@ function hideCoupon(){
 }
 
 function lightDark(){
-    if(b == 0){
-        for(let i = 0; i<cards.length;i++){
-            cards[i].style.backgroundColor="black"
-        }
-        b=1
-    }else{
-        for(let i = 0; i<cards.length;i++){
-            cards[i].style.backgroundColor="white"
-        }
-        b = 0
-    }
+    // if(b == 0){
+    //     for(let i = 0; i<cards.length;i++){
+    //         cards[i].style.backgroundColor="black"
+    //     }
+    //     b=1
+    // }else{
+    //     for(let i = 0; i<cards.length;i++){
+    //         cards[i].style.backgroundColor="white"
+    //     }
+    //     b = 0
+    // }
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].style.backgroundColor = b === 0 ? "black" : "white";
+      }
+      
+      b = b === 0 ? 1 : 0;
+
     document.body.classList.toggle("body-dark")
     banner.classList.toggle('dark')
     amazon.classList.toggle('dark')
