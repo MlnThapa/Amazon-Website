@@ -1,3 +1,5 @@
+import { Component } from "react"
+
 let mode = document.getElementById('light')
 let banner = document.querySelector('.banner')
 let amazon = document.querySelector('.amazon')
@@ -61,3 +63,99 @@ function geoLocation(){
         console.log("Geo not supported")
     }
 }
+
+
+
+//React Header
+<StyledHeader>
+      <Navbar>
+        <nav>
+            {userInfo ? (
+                <>
+                <div className='headerDiv'>
+                    <div class="left-part-container">
+                      <div class="left-part"></div>
+                    </div>
+                  <div className='userInfo' >
+                      <p onClick={handleDropdown}>{userInfo.name.slice(0,2)}</p>
+                      {
+                          bool == 1 ?(
+                            <>
+                              <div className='logoutLink' onClick={logoutHandler}>Logout</div>
+                            </>
+                          ):(
+                              <p></p>
+                          )
+                      }
+                  </div>
+                </div> 
+            </>
+           ) : (
+                <div className='linksToPages'>
+                    <Link to='/login'>
+                    <nav className='links'>
+                        Sign In
+                    </nav>
+                    </Link>
+                    <Link to='/register'>
+                    <nav className='links'>
+                        Sign Up
+                    </nav>
+                    </Link>
+            </div>
+          )}
+        </nav>
+      </Navbar>
+    </StyledHeader>
+
+
+// REact styled Component
+const StyledHeader = styled.div`
+    position:relative;   
+    height:70px;
+    width:100vw;
+    background:#4c4c4c;
+    display:flex;   
+    align-items: flex-end;
+    flex-direction:column;
+
+    .userInfo{
+        height: 50px;
+        width: 50px;
+        border:1px solid white;
+        border-radius:50%;
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-left:-15%;
+        top:8px;
+        cursor:pointer;
+    }
+    .logoutLink{
+        text-decoration:none;
+        border:1px solid #fff;
+        position:absolute;
+        font-size:0.8em;
+        color:#fff;
+        left:50px;   
+    }
+    .linksToPages{
+        display:flex;
+        height:10vh;
+        width:200px;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        margin-right:30px;
+    }
+
+    .links{
+        text-decoration: none;
+        color:#fff;
+        border:1px solid #ffc100;
+        padding:5px;
+        width:80px;
+        font-size:0.9em;   
+    }
+`

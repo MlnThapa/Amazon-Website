@@ -1,47 +1,92 @@
 import {useState, useEffect} from 'react';
 import {Link, useNavigate } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
-import {useLoginMutation} from '../slices/usersApiSlice';
+import {useRegisterMutation} from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
+import Loader from '../components/Loader';
 import {toast} from 'react-toastify';
 import styled from 'styled-components'
 
 
 function RegisterScreen() {
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [password,setPassword]= useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
-    function handleSubmit(e){
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const [register, {isLoading}] = useRegisterMutation()
+
+    const {userInfo} = useSelector((state)=> state.auth)
+
+    
+
+    async function handleSubmit(e){
         e.preventDefault();
+
+        if(password !== confirmPassword){
+            toast.error('Passwords do not match')
+        }else{
+            try{
+                const res = await register({name,email,password}).unwrap();
+                dispatch(setCredentials({...res}));
+                navigate('/login')
+            }catch(err){
+                toast.error(err?.data?.message || err.error)
+            }
+        }
     }
+    useEffect(()=>{
+        if(userInfo){
+            navigate('/login')
+        }
+    },[navigate,userInfo])
 
   return (
-     <>
+     <div className='credentialsContainer'>
        <Container>
             <h2>Create account</h2>
-            <form onSubmit={()=>handleSubmit()}>
+            <form onSubmit={handleSubmit}>
                 <div className='nameField'>
                     <h6>Username</h6>
-                    <input className='nameInput' type="text" placeholder='User name' onClick={()=>{}}/>
+                    <input className='nameInput' 
+                    type="text" 
+                    placeholder='User name' 
+                    onChange={(e)=> setName(e.target.value)}/>
                 </div>
                 <div className='emailField'>
                     <h6>Email</h6>
-                    <input className='emailInput' type="text" placeholder='Email address' onClick={()=>{}}/>
+                    <input className='emailInput' 
+                    type="text" 
+                    placeholder='Email address' 
+                    onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
                 <div className='passwordField'>
                     <div className='passwordHeadings'>
                         <span><h6>Password</h6></span>
                     </div>
-                    <input className='passwordInput' type="password" placeholder='Password' onClick={()=>{}}/>
+                    <input className='passwordInput' 
+                    type="password" 
+                    placeholder='Password' 
+                    onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
                 <div className='confirmField'>
                     <h6>Confirm password</h6>
-                    <input className='confirmPassInput' type="password" placeholder='Confirm password' onClick={()=>{}}/>
+                    <input className='confirmPassInput' 
+                    type="password" 
+                    placeholder='Confirm password' 
+                    onChange={(e)=>setConfirmPassword(e.target.value)}/>
                 </div>
                 <Button>Create your account</Button>
+
+                {isLoading && <Loader />}
             </form>
 
             <div className='createAccountBtn'>Already have an account? <Link>SignIn</Link></div>
         </Container>
-       </>
+       </div>
   )
 }
 
@@ -93,14 +138,6 @@ const Container = styled.div`
         justify-content:space-between;
         width:95%;
         margin-left:2.5%;
-    }
-    .passwordInput{
-        // width:95%;
-        // margin-left:2.5%;
-        // margin-top:2%;
-        // padding-top:5px;
-        // border:1px solid #d3d3d3;
-        // border-radius:4px;
     }
     .createAccountBtn{
         font-size:0.9em;
