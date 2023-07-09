@@ -12,7 +12,7 @@ let cards = document.querySelectorAll('.categories-container>nav')
 let temperature = document.querySelector('.temperature')
 let b = 0;
 
-window.onload(coupon.classList.add('coupon'))
+// window.onload(coupon.classList.add('coupon'))
 
 
 function hideCoupon(){
@@ -67,7 +67,7 @@ function geoLocation(){
 
 
 //React Header
-<StyledHeader>
+{/* <StyledHeader>
       <Navbar>
         <nav>
             {userInfo ? (
@@ -158,4 +158,4 @@ const StyledHeader = styled.div`
         width:80px;
         font-size:0.9em;   
     }
-`
+` */}

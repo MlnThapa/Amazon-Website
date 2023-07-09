@@ -16,7 +16,7 @@
 .amazon{
     transition: 0.2s ease-in-out;
     z-index: 0;
-    filter: blur(8px);
+    /* filter: blur(8px);    */
 }
 .amazon.dark{
     background: #191919;

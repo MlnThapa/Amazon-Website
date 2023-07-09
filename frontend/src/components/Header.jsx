@@ -1,10 +1,10 @@
+
 import { useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
-import styled from 'styled-components'
 import axios from 'axios';
 import {HiMagnifyingGlass} from 'react-icons/hi2';
 
@@ -19,7 +19,6 @@ const Header = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [logoutApiCall] = useLogoutMutation();
 
   const logoutHandler = async () => {
@@ -46,7 +45,6 @@ const Header = () => {
       axios.get(amazon_url).then((res)=>{
         setApiData(res.data)
       })
-
     }
     apiCall()
   },[])
@@ -61,29 +59,31 @@ const Header = () => {
 
 
   return (
-    <StyledHeader>
+    <div className='w-screen h-16 bg-gray-dark'>
       { userInfo ? (
-      <container className="mainContainer">
-        <div className="left-part-container">
-          <div className="left-part"></div>
+      <container className="w-screen h-16 items-center flex justify-around">
+        <div className="w-24 h-7 flex justify-center">
+          <div className="bg-[url('http://pngimg.com/uploads/amazon/amazon_PNG11.png')] w-28 h-12 bg-contain bg-no-repeat "></div>
         </div>
-        <div class="weather"></div>
-        <div class="mid-part">
-                <input type="text" placeholder="search..." />
-                <select name="categories" id="category">
+        <div className="weather"></div>
+        <div className="mid-part h-9 w-1/3 items-center flex">
+                <input className='h-9 w-8/12 rounded-l-md' type="text" placeholder="search..." />
+                <select className='h-9 w-auto text-sm bg-white' name="categories" id="category">
                     {renderOption()}
                 </select>
-                <nav className="searchBox">
-                    <HiMagnifyingGlass className="searchIcon"/>
+                <nav className="h-9 w-1/12 rounded-r-md items-center bg-orange flex justify-center ">
+                    <HiMagnifyingGlass className="searchIcon h-9 w-8/12"/>
                 </nav>
         </div>
-        <div className='headerDiv'>
-                  <div className='userInfo' >
-                      <p onClick={handleDropdown}>{userInfo.name.slice(0,2)}</p>
+        <div onClick={handleDropdown} className='h-9 w-9 border border-orange rounded-full items-center headerDiv'>
+                  <div className='py-1 px-1 userInfo' >
+                      <p className='absolute text-white'>{userInfo.name.slice(0,2)}</p>
                       {
                           bool == 1 ?(
                             <>
-                              <div className='logoutLink' onClick={logoutHandler}>Logout</div>
+                              <div className='w-16 text-white bg-orange mt-8 block text-s border border-orange flex justify-center logoutLink' onClick={logoutHandler}>
+                                <p>Logout</p>
+                              </div>
                             </>
                           ):(
                               <p></p>
@@ -105,137 +105,9 @@ const Header = () => {
                     </nav>
                     </Link>
             </div></>)}
-    </StyledHeader>
+    </div>
   );
 };
 
-const StyledHeader = styled.div`
-    height:80px;
-    width:100vw;
-    background:#151d26;
-    position:relative;
-    
-
-    .mainContainer{
-      height:100%;
-      width:100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-
-    .left-part-container{
-      height:40px;
-      width:110px;
-      margin-left:2%;
-    }
-
-    .left-part{
-      height:100%;
-      width:100%;
-      background-image: url("http://pngimg.com/uploads/amazon/amazon_PNG11.png");
-      background-position:bottom;
-      background-size:90% 90%;
-      background-repeat: no-repeat;
-  }
-
-  .weather{
-    height:40px;
-    width: 40px;
-    background-image:url('../assets/icons8-partly-cloudy-day-25.png');
-    background-position:center;
-    background-size:80% 80%;
-    background-repeat: no-repeat;
-    margin-left:2%;
-}
-.mid-part{
-    height:55%;
-    width:510px;
-    border-radius: 5px;
-    display: flex;
-}
-input{
-    width:365px;
-    outline: none;
-    height:100%;
-    border:none;
-    border-radius: 5px 0 0 5px;
-    color: #bec2c6;
-}
-input::placeholder{
-    color:#bec2c6;
-    left:2%;
-    padding:0 0 0 10px;
-    font-size: 0.9em;
-}
-#category{
-  width:100px;
-  height:100%;
-  outline:none;
-  border:1px solid #bec2c6;
-  color: #151d26;
-  font-size: 0.7em;
-}
-.searchBox{
-  width:50px;
-  height:100%;
-  background: #ff9800;
-  border-radius: 0 5px 5px 0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.searchIcon{
-  height:60%;
-  width:60%;
-}
-
-
-.userInfo{
-  height: 40px;
-  width: 40px;
-  border:3px solid white;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  top:8px;
-  cursor:pointer;
-  color:#fff;
-}
-
-.logoutLink{
-  text-decoration:none;
-  font-size:0.8em;
-  color:#fff;
-  position:absolute;
-  background:#ff9800;
-  top:75%;
-  padding:0 5px 0 5px;
-  height:30px;
-  width:70px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  transition:0.5s ease;
-}
-.linksToPages{
-  display:flex;
-  height:10vh;
-  width:200px;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  margin-right:30px;
-}
-.links{
-  text-decoration: none;
-  color:#fff;
-  border:1px solid #ffc100;
-  padding:5px;
-  width:80px;
-  font-size:0.9em;   
-}
-`
 
 export default Header;
