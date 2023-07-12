@@ -35,6 +35,14 @@ app.get('/categories', async (req,res)=>{
     res.send(output)
 })
 
+//get items
+app.get('/items', async (req,res)=>{
+    let query = {};
+    let collection = "items";
+    let output = await getData(collection,query);
+    res.send(output)
+})
+
 //get data based on categoryId
 app.get('/details', async(req,res)=>{
     let query = {};

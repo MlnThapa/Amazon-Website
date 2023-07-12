@@ -1,22 +1,26 @@
 [
     {
       "category_id": 1,
-      "category_name": "Devices"
+      "category_name": "All"
     },
     {
       "category_id": 2,
-      "category_name": "Electronics"
+      "category_name": "Devices"
     },
     {
       "category_id": 3,
-      "category_name": "Fashion"
+      "category_name": "Electronics"
     },
     {
       "category_id": 4,
-      "category_name": "Pharmacy"
+      "category_name": "Fashion"
     },
     {
       "category_id": 5,
+      "category_name": "Pharmacy"
+    },
+    {
+      "category_id": 6,
       "category_name": "Books"
     }
 ]

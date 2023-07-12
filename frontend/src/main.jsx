@@ -4,6 +4,7 @@ import App from './App.jsx'
 import HomeScreen from './screens/HomeScreen.jsx';
 import LoginScreen from './screens/LoginScreen.jsx';  
 import RegisterScreen from './screens/RegisterScreen.jsx';
+import Categories from './screens/Categories.jsx';
 
 import {
   createBrowserRouter,
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/login" element={<LoginScreen />}/>
       <Route path="/register" element={<RegisterScreen />}/>
+      <Route path="/category" element={<Categories />}/>
     </Route>
   )
 )

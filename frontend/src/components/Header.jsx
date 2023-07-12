@@ -9,12 +9,15 @@ import axios from 'axios';
 import {HiMagnifyingGlass} from 'react-icons/hi2';
 
 
-const amazon_url = "https://amazonapi-6g80.onrender.com/categories";
+
+const amazon_url = "https://amazonapi-6g80.onrender.com";
 
 const Header = () => {
   const { userInfo } = useSelector((state) => state.auth);
   let [bool,setBool] = useState(null)
   let [apiData,setApiData] = useState(null)
+  const [category,setCategory] = useState(null)
+
 
 
   const dispatch = useDispatch();
@@ -42,7 +45,7 @@ const Header = () => {
 
   useEffect(()=>{
     const apiCall = async()=>{
-      axios.get(amazon_url).then((res)=>{
+      axios.get(`${amazon_url}/categories`).then((res)=>{
         setApiData(res.data)
       })
     }
@@ -52,9 +55,18 @@ const Header = () => {
   const renderOption = ()=>{
     if(apiData){
       return apiData.map((item)=>{
-        return <option key={item.category_id} value={item.category_name}>{item.category_name}</option>
+        return (
+          <option key={item.category_id} value={item.category_id}>
+            {item.category_name}
+          </option>
+        )
       })
     }
+  }
+
+  const handleChange =(event)=>{
+    setCategory(event.target.value)
+    console.log(category)
   }
 
 
@@ -68,12 +80,17 @@ const Header = () => {
         <div className="weather"></div>
         <div className="mid-part h-9 w-1/3 items-center flex">
                 <input className='h-9 w-8/12 rounded-l-md' type="text" placeholder="search..." />
-                <select className='h-9 w-auto text-sm bg-white' name="categories" id="category">
+                <select className='h-9 w-auto text-sm bg-white' name="categories" onChange={handleChange} id="category">
                     {renderOption()}
                 </select>
-                <nav className="h-9 w-1/12 rounded-r-md items-center bg-orange flex justify-center ">
-                    <HiMagnifyingGlass className="searchIcon h-9 w-8/12"/>
-                </nav>
+                <div className="h-9 w-1/12 rounded-r-md bg-orange">
+                  <Link to={"/category"} >
+                    <nav className="h-full w-full items-center flex justify-center">
+                        <HiMagnifyingGlass className="searchIcon h-9 w-8/12"/>
+                    </nav>
+                  </Link>
+                </div>
+                
         </div>
         <div onClick={handleDropdown} className='h-9 w-9 border border-orange rounded-full items-center headerDiv'>
                   <div className='py-1 px-1 userInfo' >
@@ -94,17 +111,17 @@ const Header = () => {
       </container>
       ):(<>
       <div className='linksToPages'>
-                    <Link to='/login'>
-                    <nav className='links'>
-                        Sign In
-                    </nav>
-                    </Link>
-                    <Link to='/register'>
-                    <nav className='links'>
-                        Sign Up
-                    </nav>
-                    </Link>
-            </div></>)}
+          <Link to='/login'>
+            <nav className='links'>
+                Sign In
+            </nav>
+          </Link>
+          <Link to='/register'>
+              <nav className='links'>
+                Sign Up
+              </nav>
+          </Link>
+      </div></>)}
     </div>
   );
 };
