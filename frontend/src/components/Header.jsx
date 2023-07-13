@@ -10,7 +10,7 @@ import {HiMagnifyingGlass} from 'react-icons/hi2';
 
 
 
-const amazon_url = "https://amazonapi-6g80.onrender.com";
+const amazon_url = "https://amazonapi-2lju.onrender.com";
 
 const Header = () => {
   const { userInfo } = useSelector((state) => state.auth);

@@ -2,165 +2,217 @@
     "itemType_id": 1,
     "item-id":1,
     "item_name":"alexa",
-    "image":"https://ibb.co/2jXx9Wj"
+    "image":"https://m.media-amazon.com/images/I/51cGlUCK5WL._AC_UY436_FMwebp_QL65_.jpg",
+    "price":3000,
+    "description":"All new Echo dot 5"
 },
 {
     "itemType_id": 2,
     "item-id":2,
     "item_name":"amazon smart plug",
-    "image":"https://ibb.co/02dVwhJ"
+    "image":"https://m.media-amazon.com/images/I/6117n5vKHYL._AC_UY436_FMwebp_QL65_.jpg",
+    "price":400,
+    "description":"Amazon Smart Plug - works with alexa"
 },
 {
     "itemType_id": 2,
     "item-id":3,
     "item_name":"Remote",
-    "image":"https://ibb.co/hdRQrwV"
+    "image":"https://m.media-amazon.com/images/I/41ClwhrLnVL._AC_UY436_FMwebp_QL65_.jpg",
+    "price":1100,
+    "description":"All new Amazon remote"
 },
 
 {
     "itemType_id": 3,
     "item-id":4,
     "item_name":"Lenovo Laptop",
-    "image":"https://ibb.co/Xss0B5m"
+    "image":"https://m.media-amazon.com/images/I/616EyI60E9L._AC_UY436_FMwebp_QL65_.jpg",
+    "price":60000,
+    "description":"Gaming laptop with FHD display"
 },
 {
     "itemType_id": 3,
     "item-id":5,
     "item_name":"hp Laptop",
-    "image":"https://ibb.co/LCtt10G"
+    "image":"https://m.media-amazon.com/images/I/71TK5dRc6iL._AC_UY436_FMwebp_QL65_.jpg",
+    "price":55000,
+    "description":"All new HP-Laptop"
 },
 {
     "itemType_id": 4,
     "item-id":6,
     "item_name":"fossil watch",
-    "image":"https://ibb.co/K2ZKv7T"
+    "image":"https://m.media-amazon.com/images/I/81yU+L0BNGL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":5000,
+    "description":"Analog watch from Fossil"
 },
 {
     "itemType_id": 4,
     "item-id":7,
     "item_name":"Smart watch",
-    "image":"https://ibb.co/dMLT71w"
+    "image":"https://m.media-amazon.com/images/I/61SnUgqksrL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":3000,
+    "description":"All new smartwatch - Bluetooth"
 },
 {
     "itemType_id": 5,
     "item-id":8,
     "item_name":"Headphone",
-    "image":"https://ibb.co/z7dw62c"
+    "image":"https://m.media-amazon.com/images/I/51rpbVmi9XL._AC_UY436_FMwebp_QL65_.jpg",
+    "price":20000,
+    "description":"Sony headphone with super bass"
 },
 {
     "itemType_id": 6,
     "item-id":9,
     "item_name":"Vneck tshirt",
-    "image":"https://ibb.co/mFJrfcR"
+    "image":"https://m.media-amazon.com/images/I/71JXkIjPDHL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":400,
+    "description":"Cotton V-neck t-shirt"
 },
 {
     "itemType_id": 6,
     "item-id":10,
     "item_name":"Shirt",
-    "image":"https://ibb.co/4g8Rr9x"
+    "image":"https://m.media-amazon.com/images/I/71kayYd2TGL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":700,
+    "description":"Formal white shirt"
 },
 {
     "itemType_id": 6,
     "item-id":11,
     "item_name":"Pant",
-    "image":"https://ibb.co/Srx9ChW"
+    "image":"https://m.media-amazon.com/images/I/71E4Siegu0L._AC_SR525,789_FMwebp_QL65_.jpg",
+    "price":900,
+    "description":"All new Stylish pant"
 },
 {
     "itemType_id": 7,
     "item-id":12,
     "item_name":"Women tshirt",
-    "image":"https://ibb.co/PtJHvSw"
+    "image":"https://m.media-amazon.com/images/I/81sBc4mTQRL._AC_SR525,789_FMwebp_QL65_.jpg",
+    "price":500,
+    "description":"Cotton tshirt with new colors"
 },
 {
     "itemType_id": 7,
     "item-id":13,
     "item_name":"Women shirt",
-    "image":"https://ibb.co/Fw8rNvx"
+    "image":"https://m.media-amazon.com/images/I/81VXqiHeLJL._AC_SR1500,1500_FMwebp_QL65_.jpg",
+    "price":700,
+    "description":"Casual look shirt for women"
 },
 {
     "itemType_id": 7,
     "item-id":14,
     "item_name":"Women pants",
-    "image":"https://ibb.co/JxsqfSg"
+    "image":"https://m.media-amazon.com/images/I/61ECONzfd-L._AC_SR525,789_FMwebp_QL65_.jpg",
+    "price":1000,
+    "description":"Comfortable pants material-cotton"
 },
 {
     "itemType_id": 8,
     "item-id":15,
     "item_name":"kids tshirt",
-    "image":"https://ibb.co/9pz24Yp"
+    "image":"https://m.media-amazon.com/images/I/51aJ26-nvYL._AC_SR525,789_FMwebp_QL65_.jpg",
+    "price":200,
+    "description":"New tshirts with new colors"
 },
 {
     "itemType_id": 8,
     "item-id":16,
     "item_name":"kids Shirt",
-    "image":"https://ibb.co/vqgxgkL"
+    "image":"https://m.media-amazon.com/images/I/51WW3yvqxtL._AC_SR525,789_FMwebp_QL65_.jpg",
+    "price":450,
+    "description":"Boy's regular shirt"
 },
 {
     "itemType_id": 8,
     "item-id":17,
     "item_name":"kids Pants",
-    "image":"https://ibb.co/vqgxgkL"
+    "image":"https://m.media-amazon.com/images/I/61J8Pacfe4L._AC_SR525,789_FMwebp_QL65_.jpg",
+    "price":600,
+    "description":"Regular pants"
 },
 {
     "itemType_id": 9,
     "item-id":18,
     "item_name":"Paracetamol",
-    "image":"https://ibb.co/ZXKV5fd"
+    "image":"https://m.media-amazon.com/images/I/71YOVObQwKL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":100,
+    "description":"Paracetamol - 500mg"
 },
 {
     "itemType_id": 9,
     "item-id":19,
     "item_name":"Digestive tablet",
-    "image":"https://ibb.co/KGxwDch"
+    "image":"https://m.media-amazon.com/images/I/713EEiC1AbL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":85,
+    "description":"Himalayan organic digestive tablets"
 },
 {
     "itemType_id": 10,
     "item-id":20,
     "item_name":"Oxymeter",
-    "image":"https://ibb.co/PwdC2b3"
+    "image":"https://m.media-amazon.com/images/I/51VnQIkyxkL._AC_UL800_FMwebp_QL65_.jpg",
+    "price":400,
+    "description":"Healthsense Pulse Oxymeter"
 },
 {
     "itemType_id": 10,
     "item-id":21,
     "item_name":"Thermometer",
-    "image":"https://ibb.co/8zHF5tZ"
+    "image":"https://m.media-amazon.com/images/I/41f6znHsZ5L._AC_SX444_SY639_FMwebp_QL65_.jpg",
+    "price":110,
+    "description":"Omron M-26 Digital"
 },
 {
     "itemType_id": 10,
     "item-id":21,
-    "item_name":"Thermometer",
-    "image":"https://ibb.co/8zHF5tZ"
+    "item_name":"Infrared Thermometer",
+    "image":"https://m.media-amazon.com/images/I/41DtHJyr5lL._AC_SR500,500_FMwebp_QL65_.jpg",
+    "price":900,
+    "description":"Infrared Digital Thermometer"
 },
 {
     "itemType_id": 11,
     "item-id":22,
     "item_name":"Chyawanprash",
-    "image":"https://ibb.co/87409Z2"
+    "image":"https://m.media-amazon.com/images/I/71Rp2LXFvWL._AC_SX444_SY639_FMwebp_QL65_.jpg",
+    "price":250,
+    "description":"Dabour suger free Chyawanprash"
 },
 {
     "itemType_id": 11,
     "item-id":23,
     "item_name":"Pancharistha",
-    "image":"https://ibb.co/6XYYP41"
+    "image":"https://m.media-amazon.com/images/I/61J9gXM+qFL._AC_SX444_SY639_FMwebp_QL65_.jpg",
+    "price":180,
+    "description":"Zhandu Pancharistha 500ml"
 },
 {
     "itemType_id": 12,
     "item-id":24,
     "item_name":"Dopamine",
-    "image":"https://ibb.co/tLFJ0y9"
+    "image":"https://m.media-amazon.com/images/I/71g6xyjw8IL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+    "price":430,
+    "description":"Dopamine Detox: A short guide book"
 },
 {
     "itemType_id": 13,
     "item-id":25,
     "item_name":"Harry Potter",
-    "image":"https://ibb.co/vckd1ny"
+    "image":"https://m.media-amazon.com/images/I/81SlGeUg1EL._AC_SX444_SY639_FMwebp_QL65_.jpg",
+    "price":550,
+    "description":"The Harry Potter spell book"
 },
 {
     "itemType_id": 14,
     "item-id":26,
     "item_name":"Mathematics",
-    "image":"https://ibb.co/HGMJhqC"
+    "image":"https://m.media-amazon.com/images/I/81x-RdticFL._AC_SX444_SY639_FMwebp_QL65_.jpg",
+    "price":350,
+    "description":"Ultimate foundation series for JEE"
 }
-
-
 ]
