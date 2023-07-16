@@ -7,7 +7,9 @@ import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import axios from 'axios';
 import {HiMagnifyingGlass} from 'react-icons/hi2';
-
+import { WiDayRainWind } from "react-icons/wi";
+import { SlBasket } from "react-icons/sl";
+import {setWeatherData} from '../slices/frontendDataSlice';
 
 
 const amazon_url = "https://amazonapi-2lju.onrender.com";
@@ -17,12 +19,16 @@ const Header = () => {
   let [bool,setBool] = useState(null)
   let [apiData,setApiData] = useState(null)
   const [category,setCategory] = useState(null)
+  let [weatherInfo,setWeatherInfo] = useState([])
 
-
+  const data1 = useSelector((state)=>state.data.weatherData)
+  console.log(data1)
+  
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [logoutApiCall] = useLogoutMutation();
+  
 
   const logoutHandler = async () => {
     setBool(null)
@@ -49,24 +55,48 @@ const Header = () => {
         setApiData(res.data)
       })
     }
+    // if(weatherInfo){
+    //   dispatch(setWeatherData([12]))
+    // }
     apiCall()
-  },[])
+  },[weatherInfo])
 
-  const renderOption = ()=>{
-    if(apiData){
-      return apiData.map((item)=>{
-        return (
-          <option key={item.category_id} value={item.category_id}>
-            {item.category_name}
-          </option>
-        )
-      })
+
+  // const renderOption = ()=>{
+  //   if(apiData){
+  //     return apiData.map((item)=>{
+  //       return (
+  //         <option key={item.category_id} value={item.category_id}>
+  //           {item.category_name}
+  //         </option>
+  //       )
+  //     })
+  //   }
+  // }
+
+  function geoLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(async (data) => {
+            let latitude = data.coords["latitude"];
+            let longitude = data.coords["longitude"]
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e989050c538b213163998f96efa4a09b`)
+            const json = await response.json();
+            weatherInfo.push(json["sys"]["country"])
+            weatherInfo.push(json["name"])
+            weatherInfo.push(json["weather"][0]["main"])
+            weatherInfo.push(Math.round(json["main"]["temp"] - 273.15))
+            console.log("clicked")
+            dispatch(setWeatherData(weatherInfo))
+        })
+    }else{
+        console.log("Geo not supported")
     }
-  }
+}
+
+
 
   const handleChange =(event)=>{
     setCategory(event.target.value)
-    console.log(category)
   }
 
 
@@ -74,24 +104,24 @@ const Header = () => {
     <div className='w-screen h-16 bg-gray-dark'>
       { userInfo ? (
       <container className="w-screen h-16 items-center flex justify-around">
-        <div className="w-24 h-7 flex justify-center">
+        <div className="w-44 h-7  flex justify-between">
           <div className="bg-[url('http://pngimg.com/uploads/amazon/amazon_PNG11.png')] w-28 h-12 bg-contain bg-no-repeat "></div>
+          <div className="h-8 flex justify-center items-top weather" onClick={geoLocation}>
+            <WiDayRainWind className='h-full w-full' color='white'/>
+          </div>
         </div>
-        <div className="weather"></div>
-        <div className="mid-part h-9 w-1/3 items-center flex">
-                <input className='h-9 w-8/12 rounded-l-md' type="text" placeholder="search..." />
-                <select className='h-9 w-auto text-sm bg-white' name="categories" onChange={handleChange} id="category">
-                    {renderOption()}
-                </select>
-                <div className="h-9 w-1/12 rounded-r-md bg-orange">
+        
+        <div className="mid-part h-9 w-5/12 items-center flex">
+                <input className='h-9 w-full rounded-l-md' type="text" placeholder="search..." />
+                <div className="h-9 w-10 rounded-r-md bg-orange">
                   <Link to={"/category"} >
                     <nav className="h-full w-full items-center flex justify-center">
                         <HiMagnifyingGlass className="searchIcon h-9 w-8/12"/>
                     </nav>
                   </Link>
                 </div>
-                
         </div>
+        <div className='h-9 w-8  flex justify-center items-center'><SlBasket className='h-9 w-6 bg' color='white' /></div>
         <div onClick={handleDropdown} className='h-9 w-9 border border-orange rounded-full items-center headerDiv'>
                   <div className='py-1 px-1 userInfo' >
                       <p className='absolute text-white'>{userInfo.name.slice(0,2)}</p>

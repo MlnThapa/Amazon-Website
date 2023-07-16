@@ -1,6 +1,6 @@
 [{
     "itemType_id": 1,
-    "item-id":1,
+    "item_id":1,
     "item_name":"alexa",
     "image":"https://m.media-amazon.com/images/I/51cGlUCK5WL._AC_UY436_FMwebp_QL65_.jpg",
     "price":3000,
@@ -8,7 +8,7 @@
 },
 {
     "itemType_id": 2,
-    "item-id":2,
+    "item_id":2,
     "item_name":"amazon smart plug",
     "image":"https://m.media-amazon.com/images/I/6117n5vKHYL._AC_UY436_FMwebp_QL65_.jpg",
     "price":400,
@@ -16,7 +16,7 @@
 },
 {
     "itemType_id": 2,
-    "item-id":3,
+    "item_id":3,
     "item_name":"Remote",
     "image":"https://m.media-amazon.com/images/I/41ClwhrLnVL._AC_UY436_FMwebp_QL65_.jpg",
     "price":1100,
@@ -33,7 +33,7 @@
 },
 {
     "itemType_id": 3,
-    "item-id":5,
+    "item_id":5,
     "item_name":"hp Laptop",
     "image":"https://m.media-amazon.com/images/I/71TK5dRc6iL._AC_UY436_FMwebp_QL65_.jpg",
     "price":55000,
@@ -41,7 +41,7 @@
 },
 {
     "itemType_id": 4,
-    "item-id":6,
+    "item_id":6,
     "item_name":"fossil watch",
     "image":"https://m.media-amazon.com/images/I/81yU+L0BNGL._AC_UL800_FMwebp_QL65_.jpg",
     "price":5000,
@@ -49,7 +49,7 @@
 },
 {
     "itemType_id": 4,
-    "item-id":7,
+    "item_id":7,
     "item_name":"Smart watch",
     "image":"https://m.media-amazon.com/images/I/61SnUgqksrL._AC_UL800_FMwebp_QL65_.jpg",
     "price":3000,
@@ -57,7 +57,7 @@
 },
 {
     "itemType_id": 5,
-    "item-id":8,
+    "item_id":8,
     "item_name":"Headphone",
     "image":"https://m.media-amazon.com/images/I/51rpbVmi9XL._AC_UY436_FMwebp_QL65_.jpg",
     "price":20000,
@@ -65,7 +65,7 @@
 },
 {
     "itemType_id": 6,
-    "item-id":9,
+    "item_id":9,
     "item_name":"Vneck tshirt",
     "image":"https://m.media-amazon.com/images/I/71JXkIjPDHL._AC_UL800_FMwebp_QL65_.jpg",
     "price":400,
@@ -73,7 +73,7 @@
 },
 {
     "itemType_id": 6,
-    "item-id":10,
+    "item_id":10,
     "item_name":"Shirt",
     "image":"https://m.media-amazon.com/images/I/71kayYd2TGL._AC_UL800_FMwebp_QL65_.jpg",
     "price":700,
@@ -81,7 +81,7 @@
 },
 {
     "itemType_id": 6,
-    "item-id":11,
+    "item_id":11,
     "item_name":"Pant",
     "image":"https://m.media-amazon.com/images/I/71E4Siegu0L._AC_SR525,789_FMwebp_QL65_.jpg",
     "price":900,
@@ -89,7 +89,7 @@
 },
 {
     "itemType_id": 7,
-    "item-id":12,
+    "item_id":12,
     "item_name":"Women tshirt",
     "image":"https://m.media-amazon.com/images/I/81sBc4mTQRL._AC_SR525,789_FMwebp_QL65_.jpg",
     "price":500,
@@ -97,7 +97,7 @@
 },
 {
     "itemType_id": 7,
-    "item-id":13,
+    "item_id":13,
     "item_name":"Women shirt",
     "image":"https://m.media-amazon.com/images/I/81VXqiHeLJL._AC_SR1500,1500_FMwebp_QL65_.jpg",
     "price":700,
@@ -105,7 +105,7 @@
 },
 {
     "itemType_id": 7,
-    "item-id":14,
+    "item_id":14,
     "item_name":"Women pants",
     "image":"https://m.media-amazon.com/images/I/61ECONzfd-L._AC_SR525,789_FMwebp_QL65_.jpg",
     "price":1000,
@@ -113,7 +113,7 @@
 },
 {
     "itemType_id": 8,
-    "item-id":15,
+    "item_id":15,
     "item_name":"kids tshirt",
     "image":"https://m.media-amazon.com/images/I/51aJ26-nvYL._AC_SR525,789_FMwebp_QL65_.jpg",
     "price":200,
@@ -121,7 +121,7 @@
 },
 {
     "itemType_id": 8,
-    "item-id":16,
+    "item_id":16,
     "item_name":"kids Shirt",
     "image":"https://m.media-amazon.com/images/I/51WW3yvqxtL._AC_SR525,789_FMwebp_QL65_.jpg",
     "price":450,
@@ -129,7 +129,7 @@
 },
 {
     "itemType_id": 8,
-    "item-id":17,
+    "item_id":17,
     "item_name":"kids Pants",
     "image":"https://m.media-amazon.com/images/I/61J8Pacfe4L._AC_SR525,789_FMwebp_QL65_.jpg",
     "price":600,
@@ -137,7 +137,7 @@
 },
 {
     "itemType_id": 9,
-    "item-id":18,
+    "item_id":18,
     "item_name":"Paracetamol",
     "image":"https://m.media-amazon.com/images/I/71YOVObQwKL._AC_UL800_FMwebp_QL65_.jpg",
     "price":100,
@@ -145,7 +145,7 @@
 },
 {
     "itemType_id": 9,
-    "item-id":19,
+    "item_id":19,
     "item_name":"Digestive tablet",
     "image":"https://m.media-amazon.com/images/I/713EEiC1AbL._AC_UL800_FMwebp_QL65_.jpg",
     "price":85,
@@ -153,7 +153,7 @@
 },
 {
     "itemType_id": 10,
-    "item-id":20,
+    "item_id":20,
     "item_name":"Oxymeter",
     "image":"https://m.media-amazon.com/images/I/51VnQIkyxkL._AC_UL800_FMwebp_QL65_.jpg",
     "price":400,
@@ -161,7 +161,7 @@
 },
 {
     "itemType_id": 10,
-    "item-id":21,
+    "item_id":21,
     "item_name":"Thermometer",
     "image":"https://m.media-amazon.com/images/I/41f6znHsZ5L._AC_SX444_SY639_FMwebp_QL65_.jpg",
     "price":110,
@@ -169,7 +169,7 @@
 },
 {
     "itemType_id": 10,
-    "item-id":21,
+    "item_id":22,
     "item_name":"Infrared Thermometer",
     "image":"https://m.media-amazon.com/images/I/41DtHJyr5lL._AC_SR500,500_FMwebp_QL65_.jpg",
     "price":900,
@@ -177,7 +177,7 @@
 },
 {
     "itemType_id": 11,
-    "item-id":22,
+    "item_id":23,
     "item_name":"Chyawanprash",
     "image":"https://m.media-amazon.com/images/I/71Rp2LXFvWL._AC_SX444_SY639_FMwebp_QL65_.jpg",
     "price":250,
@@ -185,7 +185,7 @@
 },
 {
     "itemType_id": 11,
-    "item-id":23,
+    "item_id":24,
     "item_name":"Pancharistha",
     "image":"https://m.media-amazon.com/images/I/61J9gXM+qFL._AC_SX444_SY639_FMwebp_QL65_.jpg",
     "price":180,
@@ -193,7 +193,7 @@
 },
 {
     "itemType_id": 12,
-    "item-id":24,
+    "item_id":25,
     "item_name":"Dopamine",
     "image":"https://m.media-amazon.com/images/I/71g6xyjw8IL._AC_UF1000,1000_QL80_FMwebp_.jpg",
     "price":430,
@@ -201,7 +201,7 @@
 },
 {
     "itemType_id": 13,
-    "item-id":25,
+    "item_id":26,
     "item_name":"Harry Potter",
     "image":"https://m.media-amazon.com/images/I/81SlGeUg1EL._AC_SX444_SY639_FMwebp_QL65_.jpg",
     "price":550,
@@ -209,7 +209,7 @@
 },
 {
     "itemType_id": 14,
-    "item-id":26,
+    "item_id":27,
     "item_name":"Mathematics",
     "image":"https://m.media-amazon.com/images/I/81x-RdticFL._AC_SX444_SY639_FMwebp_QL65_.jpg",
     "price":350,

@@ -1,5 +1,4 @@
 import { apiSlice } from "./apiSlice";
-
 const USERS_URL ='/api/users';
 
 export const userApiSlice = apiSlice.injectEndpoints({
@@ -30,7 +29,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
                 method:'PUT',
                 body:data
             })
-        })
+        }),
     })
 })
 
