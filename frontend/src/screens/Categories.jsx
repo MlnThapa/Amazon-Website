@@ -31,8 +31,8 @@ function Categories() {
         return(
           <NavLink to={`/singleProduct/${item.item_id}`}>
             <div className={`h-96 w-64 mt-8 bg-pureWhite rounded-r-md`} key={item.__id}>
-              <div className={`h-2/3 w-full mt-8`} >
-                <img className={`h-full w-full object-contain`} src={`${item.image}`} alt="51c-Gl-UCK5-WL-AC-UY436-FMwebp-QL65" border="0"/>
+              <div className={`h-2/3 w-full mt-8 flex justify-center`} >
+                <img className={`h-10/12 w-11/12 object-contain`} src={`${item.image}`} alt="51c-Gl-UCK5-WL-AC-UY436-FMwebp-QL65" border="0"/>
               </div>
               <div className='h-9 text-sm w-full mt8 flex justify-center items-center'><h1>{item.item_name}</h1></div>
               <div className='h-11 text-xs w-fullmt8 flex justify-center items-center'><h3>{item.description}</h3></div>

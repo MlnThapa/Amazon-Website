@@ -22,7 +22,7 @@ const Header = () => {
   let [weatherInfo,setWeatherInfo] = useState([])
 
   const data1 = useSelector((state)=>state.data.weatherData)
-  console.log(data1)
+
   
 
   const dispatch = useDispatch();
@@ -105,7 +105,7 @@ const Header = () => {
       { userInfo ? (
       <container className="w-screen h-16 items-center flex justify-around">
         <div className="w-44 h-7  flex justify-between">
-          <div className="bg-[url('http://pngimg.com/uploads/amazon/amazon_PNG11.png')] w-28 h-12 bg-contain bg-no-repeat "></div>
+          <Link to="/"><div className="bg-[url('http://pngimg.com/uploads/amazon/amazon_PNG11.png')] w-28 h-12 bg-contain bg-no-repeat "></div></Link>
           <div className="h-8 flex justify-center items-top weather" onClick={geoLocation}>
             <WiDayRainWind className='h-full w-full' color='white'/>
           </div>
