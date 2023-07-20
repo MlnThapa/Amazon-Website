@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const getDefaultCart = ()=>{
     let cart = {}
     for(let i=1;i<28;i++){
-        cart[i]=0
+        cart[i]=2
     }
     return cart;
 }
@@ -26,7 +26,7 @@ export const userApiSlice = createSlice({
         addToCart:(state,action)=>{
             state.cartItems = {...state.cartItems,[action.payload]:state.cartItems[action.payload]+1}
         }
-        
+
     }
 })
 
