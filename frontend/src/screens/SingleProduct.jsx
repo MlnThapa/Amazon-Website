@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import { addToCart } from '../slices/frontendDataSlice'
 import axios from 'axios';
+import { NavLink } from 'react-router-dom'
 
 const amazon_url = "https://amazonapi-2lju.onrender.com";
 function SingleProduct() {
@@ -12,7 +13,6 @@ function SingleProduct() {
 
     const dispatch = useDispatch()
     const cartData  = useSelector((state)=> state.data.cartItems)
-    console.log(cartData)
     
 
     useEffect(()=>{
@@ -22,7 +22,6 @@ function SingleProduct() {
           })
         }
         apiCall()
-        
       },[])
       
 
@@ -41,7 +40,7 @@ function SingleProduct() {
                             <div className='h-9 text-base w-full mt8 flex-start'><h2>{a.description}</h2></div> 
                             <div><h2>&#x20B9; {a.price}</h2></div>
                             <div className='w-3/12 h-9 text-sm flex justify-center items-center rounded-3xl bg-orange'><button className='h-full w-full rounded-3xl' onClick={()=>dispatch(addToCart(a.item_id))}>Add to Cart</button></div>
-                            <div className='w-3/12 h-9 flex justify-center items-center rounded-3xl bg-orange'><button className='h-full w-full rounded-3xl bg-purple'>Buy Now</button></div>
+                            <NavLink to={`/cart`}><div className='w-3/12 h-9 flex justify-center items-center rounded-3xl bg-orange'>Buy Now</div></NavLink>
                         </div>  
                     </div>
                 )
@@ -51,7 +50,7 @@ function SingleProduct() {
 
   return (
     <>
-        <div className='mt-4 h-[35rem] w-screen flex items-center justify-center'>
+        <div className='mt-4 h-[35rem] w-screen bg-pureWhite flex items-center justify-center'>
             {filterItems()}
         </div>
         <Footer/>

@@ -22,6 +22,17 @@ const Header = () => {
   let [weatherInfo,setWeatherInfo] = useState([])
 
   const data1 = useSelector((state)=>state.data.weatherData)
+  const cartData  = useSelector((state)=> state.data.cartItems)
+
+  let itemCount = ()=>{
+    let count=0
+    for(let i=1;i<=Object.keys(cartData).length;i++){
+      if(cartData[i]!=0){
+        count += 1
+      }
+    }
+    return count
+  }
 
   
 
@@ -55,24 +66,9 @@ const Header = () => {
         setApiData(res.data)
       })
     }
-    // if(weatherInfo){
-    //   dispatch(setWeatherData([12]))
-    // }
     apiCall()
   },[weatherInfo])
 
-
-  // const renderOption = ()=>{
-  //   if(apiData){
-  //     return apiData.map((item)=>{
-  //       return (
-  //         <option key={item.category_id} value={item.category_id}>
-  //           {item.category_name}
-  //         </option>
-  //       )
-  //     })
-  //   }
-  // }
 
   function geoLocation(){
     if(navigator.geolocation){
@@ -121,7 +117,12 @@ const Header = () => {
                   </Link>
                 </div>
         </div>
-        <div className='h-9 w-8  flex justify-center items-center'><SlBasket className='h-9 w-6 bg' color='white' /></div>
+        <Link to={"/cart"}>
+          <div className='h-10 w-8 flex justify-center items-center'>
+            <SlBasket className='h-9 w-6 bg' color='white' />
+            <div className='text-white relative -ml-3 -mt-6'>{itemCount()}</div>
+          </div>
+        </Link>
         <div onClick={handleDropdown} className='h-9 w-9 border border-orange rounded-full items-center headerDiv'>
                   <div className='py-1 px-1 userInfo' >
                       <p className='absolute text-white'>{userInfo.name.slice(0,2)}</p>
@@ -140,7 +141,7 @@ const Header = () => {
                 </div> 
       </container>
       ):(<>
-      <div className='linksToPages'>
+      <div className='h-full w-1/5 flex justify-around items-center text-white linksToPages'>
           <Link to='/login'>
             <nav className='links'>
                 Sign In

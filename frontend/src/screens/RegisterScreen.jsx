@@ -5,7 +5,7 @@ import {useRegisterMutation} from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import Loader from '../components/Loader';
 import {toast} from 'react-toastify';
-import styled from 'styled-components'
+
 
 
 function RegisterScreen() {
@@ -45,135 +45,47 @@ function RegisterScreen() {
     },[navigate,userInfo])
 
   return (
-     <div className='credentialsContainer'>
-       <Container>
-            <h2>Create account</h2>
-            <form onSubmit={handleSubmit}>
-                <div className='nameField'>
-                    <h6>Username</h6>
-                    <input className='nameInput' 
+     <div className='relative h-[91vh] w-screen  flex justify-center items-center credentialsContainer'>
+       <div className='absolute h-[75%] w-96 border rounded-md border-[#595959]'>
+            <h2 className='w-full h-12 flex justify-center items-center text-2xl font-medium'>Create account</h2>
+            <form className='w-full h-4/6 flex-col flex justify-around ' onSubmit={handleSubmit}>
+                <div className='h-[23%] w-full mt-5 flex-col flex justify-between nameField'>
+                    <h6 className='ml-3 text-sm font-medium'>Username</h6>
+                    <input className='w-[93%] h-[30px] ml-3 text-sm nameInput'
                     type="text" 
                     placeholder='User name' 
                     onChange={(e)=> setName(e.target.value)}/>
                 </div>
-                <div className='emailField'>
-                    <h6>Email</h6>
-                    <input className='emailInput' 
-                    type="text" 
+                <div className='h-[23%] w-full mt-5 flex-col flex justify-between emailField'>
+                    <h6 className='ml-3 text-sm font-medium'>Email</h6>
+                    <input className='w-[93%] h-[30px] ml-3 text-sm emailInput' 
+                    type="email" 
                     placeholder='Email address' 
                     onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
-                <div className='passwordField'>
-                    <div className='passwordHeadings'>
-                        <span><h6>Password</h6></span>
-                    </div>
-                    <input className='passwordInput' 
+                <div className='h-[23%] w-full mt-5 flex-col flex justify-between passwordField'>
+                    <h6 className='ml-3 text-sm font-medium'>Password</h6>
+                    <input className='w-[93%] h-[30px] ml-3 text-sm passwordInput' 
                     type="password" 
                     placeholder='Password' 
                     onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
-                <div className='confirmField'>
-                    <h6>Confirm password</h6>
-                    <input className='confirmPassInput' 
+                <div className='h-[23%] w-full mt-5 flex-col flex justify-between confirmField'>
+                    <h6 className='ml-3 text-sm font-medium'>Confirm password</h6>
+                    <input className='w-[93%] h-[30px] ml-3 text-sm  confirmPassInput' 
                     type="password" 
                     placeholder='Confirm password' 
                     onChange={(e)=>setConfirmPassword(e.target.value)}/>
                 </div>
-                <Button>Create your account</Button>
-
+                <div className='w-[93%] ml-3 mt-10 flex justify-center'><button className='h-[30px] w-full bg-orange rounded-md'>Sign Up</button></div>
                 {isLoading && <Loader />}
             </form>
 
-            <div className='createAccountBtn'>Already have an account? <Link>SignIn</Link></div>
-        </Container>
+            <div className='mt-10 flex justify-center createAccountBtn'>Already have an account? <Link>SignIn</Link></div>
+        </div>
        </div>
   )
 }
 
-const Container = styled.div`
-    height:500px;
-    width:350px;
-    border:1px solid #d3d3d3;
-    border-radius:5px;
-
-    >h2{
-        text-transform:uppercase;
-        margin-left:5%;
-        padding-top:10px;
-        letter-spacing:1px;
-    }
-
-    form{
-        margin-top:7%;
-    }
-    .nameField{
-        padding:10px;
-    }
-    .emailField{
-        padding:10px;
-    }
-    .confirmField{
-        padding:10px;
-    }
-    h6{
-        margin-left:2.5%;
-        text-transform:uppercase;
-    }
-    .forgetPass{
-        margin:0;
-    }
-    input{
-        width:95%;
-        margin-left:2.5%;
-        margin-top:2%;
-        padding-top:5px;
-        border:1px solid #d3d3d3;
-        border-radius:4px;
-    }
-    .passwordField{
-        padding:10px;
-    }
-    .passwordHeadings{
-        display:flex;
-        justify-content:space-between;
-        width:95%;
-        margin-left:2.5%;
-    }
-    .createAccountBtn{
-        font-size:0.9em;
-        width:90%;
-        margin-left:5%;
-        margin-top:10%;
-        border:none;
-        border-radius:4px;
-    }
-    ::placeholder {
-        font-size:0.9em;
-        padding:0 0 0 5px;
-        opacity: 1; /* Firefox */
-      }
-      
-      :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        font-size:0.9em;
-        padding:0 0 0 5px;
-        opacity: 1;
-      }
-      
-      ::-ms-input-placeholder { /* Microsoft Edge */
-        font-size:0.9em;
-        padding:0 0 0 5px;
-        opacity: 1;
-      }
-`
-
-const Button = styled.button`
-    padding:5px;
-    width:90%;
-    margin-left:5%;
-    margin-top:5%;
-    background:#ffc100;
-    border:none;
-    border-radius:4px;
-`
 
 export default RegisterScreen
