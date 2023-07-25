@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
 
-mongoose.connect("mongodb+srv://admin1:bJtCWTgalLQTHPls@cluster0.m9jsjnl.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(process.env.MONGO_URI
 )
 .then(()=>{
     app.listen(PORT,()=> console.log(`Connected to port ${PORT}`))
